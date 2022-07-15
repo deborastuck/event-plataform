@@ -1,0 +1,11 @@
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+
+export const client = new ApolloClient({
+    uri: import.meta.env.VITE_API_URL,
+    // uri: 'https://api-sa-east-1.hygraph.com/v2/cl5iw442j12ht01t7hcnqh1k5/master',
+    headers: {
+        // 'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2NTc5MTAyNzYsImF1ZCI6WyJodHRwczovL2FwaS1zYS1lYXN0LTEuaHlncmFwaC5jb20vdjIvY2w1aXc0NDJqMTJodDAxdDdoY25xaDFrNS9tYXN0ZXIiLCJtYW5hZ2VtZW50LW5leHQuZ3JhcGhjbXMuY29tIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC5ncmFwaGNtcy5jb20vIiwic3ViIjoiZDRlZGMwMTQtZGU4Yy00NzQ1LWFmNWEtM2ZhYTUxYTAyODdlIiwianRpIjoiY2w1bXN6MDdjMGV3cTAxdW1kM2oxMDE1MiJ9.veCKP258s0toCvAIu4qZ8USnEnzV-0MEqG72t7mArrczuXAowTuKuFGMs7vNDFiIskGdHFXpQqR89JRxHWrPUuDd6OJ6s5Y5i6ZBaa_8OLVYaIp0LyyT7LUsXbOy4egZFXjhJjhhoTfPfx12c8ueelL7MopWpp91blQdH6ee__HIfzLANfuDm3TpCLSFNx4z8c_CH8IxSnYjcNmHUZ5tnsX9HoNH9NZDztKWeyJQXP-bqim319z8Qd7h6RJO-8trzkQ65pfS6Lz9h2srtWQ4Akkx9XlstqLmOIRoVTh9Q1ADMGQbul5OhJ9vJUf9qGLx89E7Mynr2hUw9Q02qDDSnbz-LqgS77E-R2CkojYDR_FuJxgZYWfQHmluoxVCgiRol2H2h2ERH8n4SrrQZezr97Mbbhj-w6ATixsEi8bCeglnpIpFQSfQOXF2KX9EPoqoh6CQ-dKBMtnNI-H3whcC3q8fhxGjTiu3hJ9hoH1mv9Zg4P2Scy7AxXa7hduBoSfaaKUgi8ELyAf_Iu0Fc2QgFHzU8UiCGAKMptgMjji9toKeCK2kZPuRhRNjRHJEdhWyzR3n7FTplrlxcYpb9cWkoBTzPe7Myi2b8pNPytu9G0KUZ7CpQG_t5x4r2MyICgeBAwtNbv14mbmPzPu4W4Zgv9DDmPLruX26SVsmsmhiAqg'
+        'Authorization': `Bearer ${import.meta.env.VITE_API_ACCESS_TOKEN}`
+    },
+    cache: new InMemoryCache()
+})
